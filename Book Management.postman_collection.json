@@ -1,0 +1,544 @@
+{
+	"info": {
+		"_postman_id": "18e729f4-86d5-4803-b7d5-a48d85ed32b0",
+		"name": "Book Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24341729"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "add books",
+					"item": [
+						{
+							"name": "http://localhost:3000/books",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Title\": \"b\",\r\n    \"Author\": \"b\",\r\n    \"ISBN\": \"9002938\",\r\n    \"QuantityAvailable\": 8,\r\n    \"ShelfLocation\": \"2a-3x\"\r\n  \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "list books",
+					"item": [
+						{
+							"name": "http://localhost:3000/books",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books"
+									],
+									"query": [
+										{
+											"key": "title ",
+											"value": "e",
+											"disabled": true
+										},
+										{
+											"key": "author",
+											"value": "nouran",
+											"disabled": true
+										},
+										{
+											"key": "isbn",
+											"value": "\"984039483\"",
+											"disabled": true
+										},
+										{
+											"key": "quantity",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "shelfLocation",
+											"value": "\"2a-2b-3c\"",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "update books details",
+					"item": [
+						{
+							"name": "http://localhost:3000/books",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Title\": \"a\",\r\n    \"Author\": \"a\",\r\n    \"ISBN\": \"90002938\",\r\n    \"QuantityAvailable\": 10,\r\n    \"ShelfLocation\": \"2a-3x-6b\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/books/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"4"
+									],
+									"query": [
+										{
+											"key": "title ",
+											"value": "e",
+											"disabled": true
+										},
+										{
+											"key": "author",
+											"value": "nouran",
+											"disabled": true
+										},
+										{
+											"key": "isbn",
+											"value": "\"984039483\"",
+											"disabled": true
+										},
+										{
+											"key": "quantity",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "shelfLocation",
+											"value": "\"2a-2b-3c\"",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete a book",
+					"item": [
+						{
+							"name": "http://localhost:3000/books",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Search books",
+					"item": [
+						{
+							"name": "http://localhost:3000/books",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/books/search?search_keyword=a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"books",
+										"search"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "e",
+											"disabled": true
+										},
+										{
+											"key": "isbn",
+											"value": "\"984039483\"",
+											"disabled": true
+										},
+										{
+											"key": "quantity",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "shelfLocation",
+											"value": "\"2a-2b-3c\"",
+											"disabled": true
+										},
+										{
+											"key": "search_keyword",
+											"value": "a"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Borrower",
+			"item": [
+				{
+					"name": "add a borrower",
+					"item": [
+						{
+							"name": "http://localhost:3000/borrowers",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"BorrowerName\":\"w\",\r\n    \"Email\":\"w@gmail.com\",\r\n    \"RegisteredDate\":\"2023-12-22\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/borrowers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"borrowers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "list all borrowers ",
+					"item": [
+						{
+							"name": "http://localhost:3000/borrowers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/borrowers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"borrowers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "delete a borrower",
+					"item": [
+						{
+							"name": "http://localhost:3000/borrowers/2",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/borrowers/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"borrowers",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "update a borrower",
+					"item": [
+						{
+							"name": "http://localhost:3000/borrowers/2",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"BorrowerName\":\"ouf\",\r\n    \"Email\":\"no@gmail.com\",\r\n    \"RegisteredDate\":\"2023-12-22\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/borrowers/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"borrowers",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Borrowing process",
+			"item": [
+				{
+					"name": "a user can checkout",
+					"item": [
+						{
+							"name": "http://localhost:3000/borrow",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"BorrowerID\": 1 , \r\n    \"BookID\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/borrow/checkout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"borrow",
+										"checkout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user can return books",
+					"item": [
+						{
+							"name": "http://localhost:3000/borrow/return/2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"BookID\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/borrow/return/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"borrow",
+										"return",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user can check the books they currently have",
+					"item": [
+						{
+							"name": "http://localhost:3000/borrow/books",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"BorrowerID\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/borrow/books",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"borrow",
+										"books"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "list all overdue books",
+					"item": [
+						{
+							"name": "http://localhost:3000/borrow/overdue",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/borrow/overdue",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"borrow",
+										"overdue"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Exports all overdue borrows of the last month.",
+					"item": [
+						{
+							"name": "http://localhost:3000/borrow/overdue/lastmonth",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/borrow/overdue/lastmonth",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"borrow",
+										"overdue",
+										"lastmonth"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Exports all borrowing processes of the last month",
+					"item": [
+						{
+							"name": "http://localhost:3000/borrow/lastmonth",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/borrow/lastmonth",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"borrow",
+										"lastmonth"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
