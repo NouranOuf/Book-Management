@@ -51,3 +51,6 @@ npm start
 ## Database schema 
 
 [Schema](https://lucid.app/lucidchart/69e9a5a3-65ae-4797-88b6-43372fed2846/edit?viewport_loc=384%2C-302%2C2152%2C939%2C0_0&invitationId=inv_8f5cc0ba-c63e-45aa-97bc-bdb73ce26536)
+
+## Test
+[Demo](https://drive.google.com/drive/folders/1tZj20cg5sakLGES2n_JLPR6pOvPLZbhx?fbclid=IwAR293YrR1iek7YqJcZF5xP6T3vJt4NYTl3OXWJo3hqXd0qIP1ZLTHaTZqkw)
