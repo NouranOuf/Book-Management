@@ -12,22 +12,27 @@ borrowers.
 
 * **Checkout and Return:** Enable borrowers to check out books and return while keep tracking due dates. The system automatically updates the book's availability status and maintains a borrowing history for each borrower.
 
-## Set Up
+## Setup
  * link to install MySql : [MySql](https://dev.mysql.com/downloads/)
  * give the bash script permissions to be executable
- ``
- chmod +x start_db.sh
- ``
- * run bash script to create database table
-  ``
-   ./start_db.sh
-  ``
+ 
+    ``
+    chmod +x start_db.sh
+    ``
+ 
+ * run bash script to create fresh database table
+ 
+    ``
+    ./start_db.sh
+    ``
+
     **or**
 
-import the data 
- ``
- mysql -u root -p book management < book_management_database.sql
- ``
+    #### import the data 
+
+    ``
+    mysql -u root -p book_management < ./Dump20240207/<sql_script>
+    ``
 
 ## Package Installation
 

@@ -1,3 +1,6 @@
+-- CREATE DATABASE book_management;
+USE book_management;
+
 CREATE TABLE Book (
     BookID INT PRIMARY KEY auto_increment,
     Title VARCHAR(255) unique not null,
@@ -21,6 +24,6 @@ CREATE TABLE Borrowing (
     CheckOutDate DATE not null ,
     DueDate DATE not null ,
     ReturnDate DATE,
-    FOREIGN KEY (BookID) REFERENCES Books(BookID),
-    FOREIGN KEY (BorrowerID) REFERENCES Borrowers(BorrowerID)
+    FOREIGN KEY (BookID) REFERENCES Book(BookID),
+    FOREIGN KEY (BorrowerID) REFERENCES Borrower(BorrowerID)
 );

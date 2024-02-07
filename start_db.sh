@@ -2,8 +2,8 @@
 
 DB_HOST="localhost"
 DB_USER="root"
-DB_PASSWORD="adminadmin"
-DB_NAME="book management"
+DB_PASSWORD="password"
+DB_NAME="book_management"
 
 SQL_SCRIPT="./book_management_database.sql"
 

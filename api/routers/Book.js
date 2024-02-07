@@ -8,6 +8,7 @@ const router = express.Router();
 // list all books
 router.get("/", (request, response) => {
   db.query("SELECT * FROM book", (error, res) => {
+    console.log(error); 
     if (error)
       return response.status(500).json({ error: "internal server error" });
     return response.status(200).json(res);
