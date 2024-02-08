@@ -1,4 +1,4 @@
--- CREATE DATABASE book_management;
+CREATE DATABASE book_management;
 USE book_management;
 
 CREATE TABLE Book (
